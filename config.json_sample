@@ -1,0 +1,5 @@
+{
+	"fe":	"/N/dc2/projects/lifebid/HCP/Dan/OtherTestData/proj-5a9ee80853bd38003c02afa7/sub-100206/dt-neuro-life.id-5ac6d65da614ce005008bbc6/output_fe.mat",
+	"wbfg":	"/N/dc2/projects/lifebid/HCP/Dan/OtherTestData/proj-5a9ee80853bd38003c02afa7/sub-100206/dt-neuro-track-tck.tag-ensemble.id-5ac6a61ca614ce005008bbac/track.tck",
+	"classification": "/N/dc2/projects/lifebid/HCP/Dan/OtherTestData/proj-5a9ee80853bd38003c02afa7/sub-100206/dt-neuro-wmc.tag-afq.id-5ac85718a614ce005008bde8/output.mat"
+}
