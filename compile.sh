@@ -10,6 +10,8 @@ echo "/N/u/brlife/git/jsonlab" >> $log
 (cd /N/u/brlife/git/jsonlab && git log -1) >> $log
 echo "/N/u/brlife/git/wma_tools" >> $log
 (cd /N/u/brlife/git/wma_tools && git log -1) >> $log
+echo "/N/u/brlife/git/encode" >> $log
+(cd /N/u/brlife/git/encode && git log -1) >> $log
 #echo "/N/u/brlife/git/encode" >> $log
 #(cd /N/u/brlife/git/encode && git log -1) >> $log
 #echo "/N/u/brlife/git/spm12" >> $log
@@ -19,6 +21,7 @@ cat > build.m <<END
 addpath(genpath('/N/u/brlife/git/vistasoft'))
 addpath(genpath('/N/u/brlife/git/jsonlab'))
 addpath(genpath('/N/u/brlife/git/wma_tools'))
+addpath(genpath('/N/u/brlife/git/encode'))
 mcc -m -R -nodisplay -d compiled  bsc_feAndSegQualityCheck_BL
 
 exit

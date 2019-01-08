@@ -15,9 +15,20 @@ Date:   Wed Sep 6 13:01:57 2017 -0400
     
     added package.json to be able to intall via npm package manager
 /N/u/brlife/git/wma_tools
-commit 3a0145d650f69d42ab7f502976a68e2901478c36
-Merge: 422640a b4cb38e
+commit 5e4c03771b3e89b20b2e4dd7f5a598d74d5742aa
+Merge: 722806a 36b5c56
 Author: Daniel Bullock <dnbulloc@i9.red.uits.iu.edu>
-Date:   Tue Jan 8 15:17:11 2019 -0500
+Date:   Tue Jan 8 16:25:38 2019 -0500
 
     Merge branch 'master' of https://github.com/DanNBullock/wma_tools
+    
+     no merge
+/N/u/brlife/git/encode
+commit c6d514a0af169c58fbc48b519879f84dd6f92f68
+Merge: 5ec160d 1e1e017
+Author: Franco Pestilli <frakkopesto@gmail.com>
+Date:   Fri Dec 14 09:35:22 2018 -0500
+
+    Merge pull request #93 from soichih/master
+    
+    Added code to clip out-of-dwi fiber coordinates
