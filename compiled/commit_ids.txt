@@ -15,14 +15,11 @@ Date:   Wed Sep 6 13:01:57 2017 -0400
     
     added package.json to be able to intall via npm package manager
 /N/u/brlife/git/wma_tools
-commit 5e4c03771b3e89b20b2e4dd7f5a598d74d5742aa
-Merge: 722806a 36b5c56
+commit a4a78fdf1568337c7b991d7a6afd7ddacdc7149a
 Author: Daniel Bullock <dnbulloc@i9.red.uits.iu.edu>
-Date:   Tue Jan 8 16:25:38 2019 -0500
+Date:   Wed Jan 9 10:29:32 2019 -0500
 
-    Merge branch 'master' of https://github.com/DanNBullock/wma_tools
-    
-     no merge
+    fixed classification issue
 /N/u/brlife/git/encode
 commit c6d514a0af169c58fbc48b519879f84dd6f92f68
 Merge: 5ec160d 1e1e017
