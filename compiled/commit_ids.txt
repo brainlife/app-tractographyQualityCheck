@@ -15,11 +15,11 @@ Date:   Wed Sep 6 13:01:57 2017 -0400
     
     added package.json to be able to intall via npm package manager
 /N/u/brlife/git/wma_tools
-commit 181d4b9ce17acd72b42ce07c5a4c1b32bb18319c
+commit 9e83d7c5a5f71b05d70f6b36b268e6fc3ac77852
 Author: Daniel Bullock <dnbulloc@iu.edu>
-Date:   Wed Apr 10 18:45:11 2019 -0400
+Date:   Fri Apr 12 12:29:42 2019 -0400
 
-    replaced vistasoft tck load function
+    fixed quality check code.  Minor segmentation improvements
 /N/u/brlife/git/encode
 commit 538a73bc4f8b4d94545bc2dfe434fec55e0c7a95
 Author: Soichi Hayashi <hayashis@iu.edu>
