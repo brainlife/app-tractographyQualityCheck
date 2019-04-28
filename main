@@ -7,4 +7,4 @@ set -e
 
 echo "computing tractography and/or tract statistics"
 
-time singularity exec -e docker://brainlife/mcr:neurodebian1604-r2017a ./compiled/bsc_feAndSegQualityCheck_BL
+time singularity exec -e docker://brainlife/mcr:neurodebian1604-r2017a ./compiled/bsc_feAndSegQualityCheck_BL_v2
