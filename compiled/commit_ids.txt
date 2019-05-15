@@ -15,11 +15,11 @@ Date:   Wed Sep 6 13:01:57 2017 -0400
     
     added package.json to be able to intall via npm package manager
 /N/u/brlife/git/wma_tools
-commit b9aefb8199ed9a816d149971bd97c1dab3c244e7
+commit abfc8d3dcae594775e73cbed8d97a98e084b840b
 Author: Daniel Bullock <dnbulloc@iu.edu>
-Date:   Thu May 9 21:22:24 2019 -0400
+Date:   Wed May 15 16:58:52 2019 -0400
 
-    fixed conditional for brainlife version of quality check; fixed issues in ant post segmentation
+    fixed the fixes
 /N/u/brlife/git/encode
 commit 538a73bc4f8b4d94545bc2dfe434fec55e0c7a95
 Author: Soichi Hayashi <hayashis@iu.edu>
