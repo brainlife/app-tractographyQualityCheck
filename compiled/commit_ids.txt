@@ -15,11 +15,11 @@ Date:   Wed Sep 6 13:01:57 2017 -0400
     
     added package.json to be able to intall via npm package manager
 /N/u/brlife/git/wma_tools
-commit 1cd00267b91f55d479224bffb49ffbabab01407a
+commit 1c5dfacd675c5f5cd654b962e33b301aaa6c168c
 Author: Daniel Bullock <dnbulloc@iu.edu>
-Date:   Thu May 16 14:08:35 2019 -0400
+Date:   Fri Aug 23 19:04:26 2019 -0400
 
-    fixed if statement to actually handle either classification input or output input.  Also, made directory before conditional
+    fixed experimental version of corpus callosum.  quality check should no longer assume classification
 /N/u/brlife/git/encode
 commit 538a73bc4f8b4d94545bc2dfe434fec55e0c7a95
 Author: Soichi Hayashi <hayashis@iu.edu>
