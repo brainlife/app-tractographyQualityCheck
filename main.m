@@ -18,7 +18,7 @@ end
 config = loadjson('config.json');
 
 if isfield(config,'fe')
-    load(config.fe);
+    load(config.fe)
     feORwbfg=fe;
     %feORwbfg=config.fe;
     fibNum=length(feORwbfg.fg.fibers);
