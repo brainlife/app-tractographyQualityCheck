@@ -77,13 +77,9 @@ a csv output from the quality check app ([https://doi.org/10.25663/brainlife.app
 |   | Code Link: https://github.com/DanNBullock/wma\_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma\_quantWBFG.m#L68 |
 | StreamlineLengthTotal | The sum total of streamline lengths for this tract (i.e. total wiring) |
 |   | Code Link:https://github.com/DanNBullock/wma\_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma\_quantTract.m#L76 |
-| endpoint1Density\* | The density of the endpoint mask associated with the right/superior/anterior-most (whichever is most appropriate for this tract) collection of terminations for this tract.  Computes the number of endpoints per occupied (by endpoints from this group) 1mm
-# 3
- voxel. |
+| endpoint1Density\* | The density of the endpoint mask associated with the right/superior/anterior-most (whichever is most appropriate for this tract) collection of terminations for this tract.  Computes the number of endpoints per occupied (by endpoints from this group) 1mm cubic voxel. |
 |   | Code Link: https://github.com/DanNBullock/wma\_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma\_quantTract.m#L125 |
-| Endpoint2Density\* | The density of the endpoint mask associated with the left/inferior/posterior-most (whichever is most appropriate for this tract) collection of terminations for this tract.  Computes the number of endpoints per occupied (by endpoints from this group) 1mm
-# 3
- voxel. |
+| Endpoint2Density\* | The density of the endpoint mask associated with the left/inferior/posterior-most (whichever is most appropriate for this tract) collection of terminations for this tract.  Computes the number of endpoints per occupied (by endpoints from this group) 1mm cubic voxel. |
 |   | Code Link: https://github.com/DanNBullock/wma\_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma\_quantTract.m#L141 |
 | AverageEndpointDistanceFromCentroid1\* | The average distance of a streamline endpoint within the right/superior/anterior-most group from the centroid of this group.  Computed as the euclidean distance from the average coordinate of this group.  Considered to be a measure of streamline endpoint dispersion. |
 |   | Code Link: https://github.com/DanNBullock/wma\_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma\_quantTract.m#L133 |
@@ -180,7 +176,6 @@ Note:  statistics listed immediately below are those within the field contents o
 |   | Code link:https://github.com/DanNBullock/wma\_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma\_quantAllWMNorm.m#L58 |
 | results.WBFG.tractStats{1,i}.midpointVolumeProp | The proportion of the total white matter volume occupied by this endpoint mask associated with the midpoints of streamlines associated with this tract.  Intended to control for variability in brain size. |
 |   | Code link: https://github.com/DanNBullock/wma\_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma\_quantAllWMNorm.m#L59 |
-
 
 #### Product.json
 
