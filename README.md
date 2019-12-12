@@ -60,47 +60,47 @@ a csv output from the quality check app ([https://doi.org/10.25663/brainlife.app
 | TractName | The name of this tract |
 |   | Code Link:  NA |
 | StreamlineCount | The number of streamlines in this tract |
-|   | Code Link:https://github.com/DanNBullock/wma\_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma\_quantTract.m#L75 |
+|   | Code Link:https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma_quantTract.m#L75 |
 | volume | The volume occupied by this tract (presented in cubic mm) |
-|   | Code Link: https://github.com/DanNBullock/wma\_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma\_quantTract.m#L94 |
+|   | Code Link: https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma_quantTract.m#L94 |
 | avgerageStreamlineLength | The mean streamline length of this tract |
-|   | Code Link: https://github.com/DanNBullock/wma\_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma\_quantTract.m#L79 |
+|   | Code Link: https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma_quantTract.m#L79 |
 | streamlineLengthStdev | The standard deviation of streamline lengths for this tract |
-|   | Code Link: https://github.com/DanNBullock/wma\_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma\_quantTract.m#L80 |
+|   | Code Link: https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma_quantTract.m#L80 |
 | averageFullDisplacement | The average distance between streamline endpoints for this tract |
-|   | Code Link: https://github.com/DanNBullock/wma\_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma\_quantTract.m#L67 |
+|   | Code Link: https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma_quantTract.m#L67 |
 | fullDisplacementStdev | The standard deviation of distances between streamline endpoints for this tract |
-|   | Code Link: https://github.com/DanNBullock/wma\_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma\_quantTract.m#L68 |
+|   | Code Link: https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma_quantTract.m#L68 |
 | ExponentialFitA | The (a) parameter when fitting y=a^(b\*x) for the whole brain distribution of fiber lengths.  Only ever computed for the whole brain tractography (i.e. is empty for all non &quot;whole brain&quot; tracts) |
-|   | Code Link: https://github.com/DanNBullock/wma\_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma\_quantWBFG.m#L67 |
+|   | Code Link: https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma_quantWBFG.m#L67 |
 | ExponentialFitB | The (b) parameter when fitting y=a^(b\*x) for the whole brain distribution of fiber lengths.  Only ever computed for the whole brain tractography (i.e. is empty for all non &quot;whole brain&quot; tracts) |
-|   | Code Link: https://github.com/DanNBullock/wma\_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma\_quantWBFG.m#L68 |
+|   | Code Link: https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma_quantWBFG.m#L68 |
 | StreamlineLengthTotal | The sum total of streamline lengths for this tract (i.e. total wiring) |
-|   | Code Link:https://github.com/DanNBullock/wma\_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma\_quantTract.m#L76 |
+|   | Code Link:https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma_quantTract.m#L76 |
 | endpoint1Density\* | The density of the endpoint mask associated with the right/superior/anterior-most (whichever is most appropriate for this tract) collection of terminations for this tract.  Computes the number of endpoints per occupied (by endpoints from this group) 1mm cubic voxel. |
-|   | Code Link: https://github.com/DanNBullock/wma\_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma\_quantTract.m#L125 |
+|   | Code Link: https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma_quantTract.m#L125 |
 | Endpoint2Density\* | The density of the endpoint mask associated with the left/inferior/posterior-most (whichever is most appropriate for this tract) collection of terminations for this tract.  Computes the number of endpoints per occupied (by endpoints from this group) 1mm cubic voxel. |
-|   | Code Link: https://github.com/DanNBullock/wma\_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma\_quantTract.m#L141 |
+|   | Code Link: https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma_quantTract.m#L141 |
 | AverageEndpointDistanceFromCentroid1\* | The average distance of a streamline endpoint within the right/superior/anterior-most group from the centroid of this group.  Computed as the euclidean distance from the average coordinate of this group.  Considered to be a measure of streamline endpoint dispersion. |
-|   | Code Link: https://github.com/DanNBullock/wma\_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma\_quantTract.m#L133 |
+|   | Code Link: https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma_quantTract.m#L133 |
 | AverageEndpointDistanceFromCentroid2\* | The average distance of a streamline endpoint within the left/inferior/posterior-most group from the centroid of this group.  Computed as the euclidean distance from the average coordinate of this group.  Considered to be a measure of streamline endpoint dispersion. |
-|   | Code Link: https://github.com/DanNBullock/wma\_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma\_quantTract.m#L149 |
+|   | Code Link: https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma_quantTract.m#L149 |
 | stdevOfEndpointDistanceFromCentroid1\* | The standard deviation of the distances of a streamline endpoint within the right/superior/anterior-most group from the centroid of this group.  Computed as the euclidean distance from the average coordinate of this group. |
 |   | Code Link: https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma_quantTract.m#L134 |
 | stdevEndpointDistanceFromCentroid2\* | The standard deviation of the distances of a streamline endpoint within the left/inferior/posterior-most group from the centroid of this group.  Computed as the euclidean distance from the average coordinate of this group. |
-|   | Code Link: https://github.com/DanNBullock/wma\_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma\_quantTract.m#L150 |
+|   | Code Link: https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma_quantTract.m#L150 |
 | MidpointDensity | The density of the midpoint mask associated for this tract.  Computes the number of midpoints per occupied (by midpoints) 1mm cubic voxel. |
-|   | Code Link: https://github.com/DanNBullock/wma\_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma\_quantTract.m#L157 |
+|   | Code Link: https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma_quantTract.m#L157 |
 | averageMidpointDistanceFromCentroid | The average distance of a streamline midpoint from the centroid of this group.  Computed as the euclidean distance from the average coordinate of this group. |
-|   | Code Link: https://github.com/DanNBullock/wma\_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma\_quantTract.m#L165 |
+|   | Code Link: https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma_quantTract.m#L165 |
 | stDevOfMidpointDistanceFromCentroid | The standard deviation of the distances of a streamline midpoint from the centroid of this group.  Computed as the euclidean distance from the average coordinate of this group. |
-|   | Code Link: https://github.com/DanNBullock/wma\_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma\_quantTract.m#L166 |
+|   | Code Link: https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma_quantTract.m#L166 |
 | TotalVolumeProportion | The proportion of the total white matter volume occupied by this tract.  Intended to control for variability in brain size. |
-|   | Code Link: https://github.com/DanNBullock/wma\_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma\_quantAllWMNorm.m#L53 |
+|   | Code Link: https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma_quantAllWMNorm.m#L53 |
 | TotalCountProportion | The proportion of the total number of streamlines associated with tract.  Intended to control for variability in input tractogram size (i.e. whole brain streamline total). |
-|   | Code Link: https://github.com/DanNBullock/wma\_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma\_quantAllWMNorm.m#L54 |
+|   | Code Link: https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma_quantAllWMNorm.m#L54 |
 | TotalWiringProportion | The proportion of the total streamline length accounted for by streamlines associated with this tract. |
-|   | Code Link: https://github.com/DanNBullock/wma\_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma\_quantAllWMNorm.m#L55 |
+|   | Code Link: https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma_quantAllWMNorm.m#L55 |
 
 \*endpoint membership in either the left/inferior/posterior-most (LIP) or right/superior/anterior-most (RAS) group is determined by the following process:
 
@@ -132,23 +132,23 @@ Note:  statistics listed immediately below are those within the field contents o
 | **Fieldname (within results.WBFG)** | **Description** |
 | --- | --- |
 | avgefficiencyRat(average efficiency ratio) | This quantity is the _average efficiency ratio_ for all streamlines in the entire whole brain fiber group.  For a given streamline this is computed by dividing the streamline&#39;s _displacement_ (see description in tractmeasures.csv section) by that same streamline&#39;s length.  Thus this value approaches 1 as a streamline approaches being shaped like a straight line, and approaches 0 as a streamline approaches being shaped like a full circuit. |
-|   | Code link:https://github.com/DanNBullock/wma\_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/ConnectomeTestQ\_v2.m#L49 |
+|   | Code link:https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/ConnectomeTestQ_v2.m#L49 |
 | stDevefficiencyRat(standard deviation of efficiency ratio) | This quantity is the _standard deviation of the efficiency ratio_ for all streamlines in the entire whole brain fiber group. |
-|   | Code link:https://github.com/DanNBullock/wma\_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma\_quantTract.m#L71 |
+|   | Code link:https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma_quantTract.m#L71 |
 | avgAsymRat(average asymmetry ratio) | This quantity is the _average asymmetry ratio_ for all streamlines in the entire whole brain fiber group.  In essence, for a given streamline, it is the square of the differences between the efficiency ratios for the respective halves of a streamline.  Thus, as a streamline&#39;s _asymmetry ratio_ approaches the maximum of 1, it indicates that one half has an efficiency ratio of 0, and resembles a full circuit, while the other half has an efficiency ratio of 1 and resembles a straight line.  On the other hand, as a streamline&#39;s _asymmetry ratio_ approaches the minimum of 0, the difference between the two halves&#39; efficiency ratios approach 0, and are thus presumed to more closely resemble one another, at least within the domain of wiring efficiency. |
-|   | Code link:https://github.com/DanNBullock/wma\_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/ConnectomeTestQ\_v2.m#L52 |
+|   | Code link:https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/ConnectomeTestQ_v2.m#L52 |
 | stdDevAsymRat(standard deviation of asymmetry ratio) | This quantity is the _standard deviation of the asymmetry ratio_ for all streamlines in the entire whole brain fiber group. |
-|   | Code link:https://github.com/DanNBullock/wma\_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma\_quantTract.m#L65 |
+|   | Code link:https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma_quantTract.m#L65 |
 | volLengthRatio(volume length ratio) | The ratio of the total wiring length for all streamlines in the whole brain fiber group to the total white matter volume of the whole brain fiber group (i.e. in this case, simply the total volume of the white matter) |
-|   | Code link:https://github.com/DanNBullock/wma\_tools/blob/92c4c1aa2bedd569e696ef1476eb979567849c9f/wma\_quantTract.m#L96 |
+|   | Code link:https://github.com/DanNBullock/wma_tools/blob/92c4c1aa2bedd569e696ef1476eb979567849c9f/wma_quantTract.m#L96 |
 | lengthCounts  | A 1x299 long vector wherein the ith entry corresponds to the number of streamlines such that i≤[streamline length]\&lt;i+1 |
-|   | Code link:https://github.com/DanNBullock/wma\_tools/blob/92c4c1aa2bedd569e696ef1476eb979567849c9f/wma\_quantTract.m#L99 |
+|   | Code link:https://github.com/DanNBullock/wma_tools/blob/92c4c1aa2bedd569e696ef1476eb979567849c9f/wma_quantTract.m#L99 |
 | LengthProps | A 1x299 long vector wherein the ith entry corresponds to the proportion of the total number of streamlines such that i≤[streamline length]\&lt;i+1 |
-|   | Code link:https://github.com/DanNBullock/wma\_tools/blob/5453f056df5f43c6a12c57fe76eabfd7eba3705c/wma\_quantWBFG.m#L52 |
+|   | Code link:https://github.com/DanNBullock/wma_tools/blob/5453f056df5f43c6a12c57fe76eabfd7eba3705c/wma_quantWBFG.m#L52 |
 | LengthData | The computed length for each streamline in the whole brain fiber group. |
-|   | Code link:https://github.com/DanNBullock/wma\_tools/blob/5453f056df5f43c6a12c57fe76eabfd7eba3705c/wma\_quantWBFG.m#L62 |
+|   | Code link:https://github.com/DanNBullock/wma_tools/blob/5453f056df5f43c6a12c57fe76eabfd7eba3705c/wma_quantWBFG.m#L62 |
 | tractStats | A 1 by N cell structure, wherein each cell entry corresponds to the output of a quantitative analysis **for a specific tract**.  The ith entry in this cell structure corresponds to the tract specified in the ith entry in the classification.names field of the associated classification structure. |
-|   | Code link:https://github.com/DanNBullock/wma\_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma\_quantAllWMNorm.m#L46 |
+|   | Code link:https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma_quantAllWMNorm.m#L46 |
 
 Note:  statistics listed immediately below are those within the field contents of results.WBFG.tractStats{1,i}, where i corresponds the tract specified in the ith entry in the classification.names field of the associated classification structure.  The quantifications described below are specific to their associated tract.  Omitted from these descriptions are quantifications which have been described either for the **tractmeasures.csv** data object or the results.WBFG field.  In cases where the quantification has previously been described within the context of a measurement of a whole brain fiber group, the quantification is to be understood to represent the same general concept, but to characterize a specific tract in these cases.
 
@@ -157,23 +157,23 @@ Note:  statistics listed immediately below are those within the field contents o
 | **Fieldname (within results.WBFG.tractStats{1,i})** | **Description** |
 | --- | --- |
 | endpointVolume1 | The volume of the endpoint mask associated with the right/superior/anterior-most (whichever is most appropriate for this tract) collection of terminations for this tract. |
-|   | Code link:https://github.com/DanNBullock/wma\_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma\_quantTract.m#L123 |
+|   | Code link:https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma_quantTract.m#L123 |
 | endpointVolume2 | The volume of the endpoint mask associated with the left/inferior/posterior-most (whichever is most appropriate for this tract) collection of terminations for this tract. |
-|   | Code link:https://github.com/DanNBullock/wma\_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma\_quantTract.m#L139 |
+|   | Code link:https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma_quantTract.m#L139 |
 | avgEndpointCoord1 | The centroid of the endpoints associated with the  right/superior/anterior-most end of this tract.  Computed as the average coordinate of this group. |
-|   | Code link:https://github.com/DanNBullock/wma\_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma\_quantTract.m#L124 |
+|   | Code link:https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma_quantTract.m#L124 |
 | avgEndpointCoord2 | The centroid of the endpoints associated with the  left/inferior/posterior-most end of this tract.  Computed as the average coordinate of this group. |
-|   | Code link:https://github.com/DanNBullock/wma\_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma\_quantTract.m#L140 |
+|   | Code link:https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma_quantTract.m#L140 |
 | midpointVolume | The volume of the endpoint mask associated with the midpoints of streamlines associated with this tract. |
-|   | Code link:https://github.com/DanNBullock/wma\_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma\_quantTract.m#L155 |
+|   | Code link:https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma_quantTract.m#L155 |
 | avgMidpointCoord | The centroid of the midpoints of streamlines associated with this tract.  Computed as the average coordinate of this group. |
-|   | Code link:https://github.com/DanNBullock/wma\_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma\_quantTract.m#L156 |
+|   | Code link:https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma_quantTract.m#L156 |
 | results.WBFG.tractStats{1,i}.endpointVolume1Prop | The proportion of the total white matter volume occupied by this endpoint mask associated with the right/superior/anterior-most (whichever is most appropriate for this tract) collection of terminations for this tract.  Intended to control for variability in brain size. |
-|   | Code link:https://github.com/DanNBullock/wma\_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma\_quantAllWMNorm.m#L57 |
+|   | Code link:https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma_quantAllWMNorm.m#L57 |
 | results.WBFG.tractStats{1,i}.endpointVolume2Prop | The proportion of the total white matter volume occupied by this endpoint mask associated with the left/inferior/posterior-most (whichever is most appropriate for this tract) collection of terminations for this tract.  Intended to control for variability in brain size. |
-|   | Code link:https://github.com/DanNBullock/wma\_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma\_quantAllWMNorm.m#L58 |
+|   | Code link:https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma_quantAllWMNorm.m#L58 |
 | results.WBFG.tractStats{1,i}.midpointVolumeProp | The proportion of the total white matter volume occupied by this endpoint mask associated with the midpoints of streamlines associated with this tract.  Intended to control for variability in brain size. |
-|   | Code link: https://github.com/DanNBullock/wma\_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma\_quantAllWMNorm.m#L59 |
+|   | Code link: https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma_quantAllWMNorm.m#L59 |
 
 #### Product.json
 
