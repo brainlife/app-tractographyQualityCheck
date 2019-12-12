@@ -86,7 +86,7 @@ a csv output from the quality check app ([https://doi.org/10.25663/brainlife.app
 | AverageEndpointDistanceFromCentroid2\* | The average distance of a streamline endpoint within the left/inferior/posterior-most group from the centroid of this group.  Computed as the euclidean distance from the average coordinate of this group.  Considered to be a measure of streamline endpoint dispersion. |
 |   | Code Link: https://github.com/DanNBullock/wma\_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma\_quantTract.m#L149 |
 | stdevOfEndpointDistanceFromCentroid1\* | The standard deviation of the distances of a streamline endpoint within the right/superior/anterior-most group from the centroid of this group.  Computed as the euclidean distance from the average coordinate of this group. |
-|   | Code Link: https://github.com/DanNBullock/wma\_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma\_quantTract.m#L134 |
+|   | Code Link: https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma_quantTract.m#L134 |
 | stdevEndpointDistanceFromCentroid2\* | The standard deviation of the distances of a streamline endpoint within the left/inferior/posterior-most group from the centroid of this group.  Computed as the euclidean distance from the average coordinate of this group. |
 |   | Code Link: https://github.com/DanNBullock/wma\_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma\_quantTract.m#L150 |
 | MidpointDensity | The density of the midpoint mask associated for this tract.  Computes the number of midpoints per occupied (by midpoints) 1mm cubic voxel. |
