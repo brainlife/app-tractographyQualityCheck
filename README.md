@@ -47,12 +47,14 @@ Visit brainlife.io and explore the following data sets to find viable classifica
 HCP classificaiton:  https://brainlife.io/project/5c3caea0a6747b0036dcbf9a/
 HCP tractography:  https://brainlife.io/project/5c3caea0a6747b0036dcbf9a/
 
-## Output
+### Output
 
 There are three outputs associated A tractmeasures csv, an image/svg, and “raw”  type output.
 
-## tractmeasures
-a csv output which displays the following traits for each tract:
+**tractmeasures**
+
+a csv output from the quality check app ([https://doi.org/10.25663/brainlife.app.189](https://doi.org/10.25663/brainlife.app.189)) which displays the following traits for each tract:
+
 | **Column header** | **Description** |
 | --- | --- |
 | TractName | The name of this tract |
@@ -110,9 +112,11 @@ a csv output which displays the following traits for each tract:
 1. computing the primary dimension of traversal for a tract (i.e. left-right, inferior-superior, anterior-posterior) by determining which dimension exhibits the greatest displacement for the given tract.
 2. Once this dimension has been determined, the relevant coordinates (x, y, or z) of the streamline&#39;s endpoints are checked to determine determine LIP or RAS membership
 
-**image/svg
 
-An svg image output with the following plots:
+
+**image/svg**** :**
+
+An svg image output from the quality check app ([https://doi.org/10.25663/brainlife.app.189](https://doi.org/10.25663/brainlife.app.189)) with the following plots:
 
 | **Figure title** | **X axis quantity** | **Y axis quantity** | **Description** |
 | --- | --- | --- | --- |
@@ -121,6 +125,8 @@ An svg image output with the following plots:
 | &quot;Classified Streamline proportion Comparison:  WBFG &amp; Surviving&quot; | streamline length (in mm) | total proportion of classified streamlines | Similar to the first plot, but only computes proportions for classified streamlines.  Proportion is relative to all classified streamlines. |
 | &quot;Log10 of proportion of connectome streamlines in tract&quot; | tract names | log10 of the percentage of the total number of streamlines in whole brain fiber group | For all identified tracts in the input white matter classification (WMC) structure this plot indicates the percentage (scaled in log10) of all streamlines in the whole brain fiber group that are associated with this specific tract.For tracts which have left and right variants, left is plotted in blue and right is plotted in orange.  For tracts which do not have left and right variants (i.e. are interhemispheric) the default color is blue. |
 | &quot;Proportion of white matter volume occupied by tract&quot; | tract names | Portion of white matter occupied (by percent) | For all identified tracts in the input white matter classification (WMC) structure this plot indicates the percentage of the total white matter volume occupied by each respective tract. For tracts which have left and right variants, left is plotted in blue and right is plotted in orange.  For tracts which do not have left and right variants (i.e. are interhemispheric) the default color is blue. |
+
+
 
 **&quot;raw&quot; type output**** :**
 
