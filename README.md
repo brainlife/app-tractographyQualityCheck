@@ -2,7 +2,7 @@
 [![Run on Brainlife.io](https://img.shields.io/badge/Brainlife-bl.app.189-blue.svg)](https://doi.org/10.25663/brainlife.app.189)
 
 # app-tractographyQualityCheck
-Compute a number of statistics about your input tractogram and any (optionally input) associated classification structure.
+Compute a number of statistics about your input tractogram and any (optionally input) associated classification structure.  These statistics can be used to facilitate quality assurance on your tractography and segmentation, or as part of subject/group level quantative analysis for a research project.  See the output section for a detailed description of the measures computed.
 
 ### Authors
 - Daniel Bullock (dnbulloc@iu.edu)
