@@ -11,13 +11,13 @@ Date:   Tue Aug 20 12:20:38 2019 -0400
 
     fix table transpose issue for uniform type tables
 /N/u/brlife/git/wma_tools
-commit f675c0a92500dacabf2997bc06206dbd3d87611f
-Author: Daniel Bullock <dnbulloc@iu.edu>
-Date:   Wed Dec 4 14:24:37 2019 -0500
+commit ae863769e7e732c3bcf730f30ac13a59be402b8d
+Author: Daniel Bullock <iisdanbul@gmail.com>
+Date:   Sun Feb 16 17:41:43 2020 -0500
 
-    added to find call to ensure singular output
+    fixed indexing issue
     
-    added optional input to find call to ensure that the min find operations only have one output.  This was likely causing errors.
+    fixed indexing issue with this line.  Note, other versions of this function do not have this issue.  Recommend replacing instances of this function with v4 https://github.com/DanNBullock/wma_tools/blob/master/bsc_makeFGsFromClassification_v4.m
 /N/u/brlife/git/encode
 commit 5f6d1c10af7c4596992e6aa31ccd16f2cef89e4c
 Merge: 538a73b 3e3b377
