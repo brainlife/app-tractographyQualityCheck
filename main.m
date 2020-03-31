@@ -3,7 +3,7 @@ function main()
 if ~isdeployed
     disp('adding paths');
     addpath(genpath('/N/u/brlife/git/encode'))
-    addpath(genpath('/N/soft/rhel7/spm/8')) %spm needs to be loaded before vistasoft as vistasoft provides anmean that works
+    %addpath(genpath('/N/soft/rhel7/spm/8')) %spm needs to be loaded before vistasoft as vistasoft provides anmean that works
     addpath(genpath('/N/u/brlife/git/jsonlab'))
     addpath(genpath('/N/u/brlife/git/vistasoft'))
     addpath(genpath('/N/u/brlife/git/wma_tools'))
@@ -23,10 +23,10 @@ else
 end
 
 if isfield(config,'output')
-    disp(['loading (deprecated)' config.output])
+    disp(['loading (deprecated) > ' config.output])
     load(config.output)
 elseif isfield(config,'classification')
-    disp(['loading' config.classification])
+    disp(['loading > ' config.classification])
     load(config.classification)
 else
     disp('no classification input')
@@ -41,10 +41,6 @@ if ~notDefined('classification')
         exit
     end
 end
-
-disp('loading fiber structure------------------------------------')
-rangeSet=11:250;
-[wbFG, fe] = bsc_LoadAndParseFiberStructure(feORwbfg);
 
 if notDefined('classification')
     disp('running wma_quantWBFG -------------------------------------')
@@ -104,8 +100,12 @@ fullFieldNames={'TractName','StreamlineCount', 'volume','avgerageStreamlineLengt
 
 %conditionals=11:19;
 
+disp('parsing fiber structure')
+[~, fe] = bsc_LoadAndParseFiberStructure(feORwbfg);
+
 % if both fe and class are present
 figure
+rangeSet=11:250;
 if ~notDefined('fe') & ~notDefined('classification')
     %readout stats
     textBoxHandle=subplot(2,5,[1 6]);
@@ -519,14 +519,12 @@ if ~exist('tractmeasures', 'dir')
     mkdir('tractmeasures');
 end
 save('tractmeasures/tractomeResultStruc.mat','results')
-which('tractmeasures/tractomeResultStruc.mat')
+%which('tractmeasures/tractomeResultStruc.mat')
 
 %results.WBFG.tractStats
+disp('creating resultSummary')
 
 %making it outside conditional
-resultsSummaryDir=fullfile(pwd,'resultsSummary');
-mkdir(resultsSummaryDir)
-
 if or(isfield(config,'output'),isfield(config,'classification'))
     for itracts=1:length(results.WBFG.tractStats)
         tableArray{itracts+1,1}=results.WBFG.tractStats{itracts}.name;
@@ -592,6 +590,12 @@ else
     warning('no input classification found')
 end
 if exist('tableOut','var')
-    writetable(tableOut,fullfile(resultsSummaryDir,'output_FiberStats.csv'));
+    if ~exist('resultsSummary', 'dir')
+        mkdir('resultsSummary')
+    end
+    writetable(tableOut,'resultsSummary/output_FiberStats.csv');
 end
+
+disp('all done ------------------------------------------')
+
 end

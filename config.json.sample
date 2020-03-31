@@ -1,5 +1,4 @@
 {
-    "track": "testdata/5b6ded4876092800432770f2/track.tck",
-    "classification": "testdata/5d7b4904b057828bbf95d4c9/classification.mat",
-    "tracts": "testdata/5d7b4904b057828bbf95d4c9/tracts"
+    "track": "testdata/track/track.tck",
+    "classification-dis": "testdata/track/classification.mat"
 }
