@@ -2,16 +2,16 @@
 [![Run on Brainlife.io](https://img.shields.io/badge/Brainlife-bl.app.189-blue.svg)](https://doi.org/10.25663/brainlife.app.189)
 
 # app-tractographyQualityCheck
-Compute a number of statistics about your input tractogram and any (optionally input) associated classification structure.  These statistics can be used to facilitate quality assurance on your tractography and segmentation, or as part of subject/group level quantative analysis for a research project.  See the output section for a detailed description of the measures computed.
+This app computes a number of statistics about your [input tractogram](https://brainlife.io/datatype/5907d922436ee50ffde9c549) and any (optionally input) **associated** [White Matter Classification (WMC) structure](https://brainlife.io/datatype/5cc1d64c44947d8aea6b2d8b).  These statistics can be used to facilitate quality assurance on your tractography and segmentation, or as part of subject/group level quantative analysis for a research project.  See the output section for a detailed description of the measures computed.
 
 ### Authors
-- Daniel Bullock (dnbulloc@iu.edu)
+- [Daniel Bullock](https://github.com/DanNBullock) (dnbulloc@iu.edu)
 
 ### Contributors
-- Soichi Hayashi (hayashis@iu.edu)
+- [Soichi Hayashi](https://github.com/soichih) (hayashis@iu.edu)
 
 ### Project Director
-- Franco Pestilli (franpest@indiana.edu)
+- [Franco Pestilli](https://github.com/francopestilli) (franpest@indiana.edu)
 
 ### Funding 
 [![NSF-BCS-1734853](https://img.shields.io/badge/NSF_BCS-1734853-blue.svg)](https://nsf.gov/awardsearch/showAward?AWD_ID=1734853)
@@ -25,7 +25,7 @@ TBA
 
 ### On Brainlife.io
 
-Visit https://doi.org/10.25663/brainlife.app.189 to run this app on the brainlife.io platform.  Minimally requires a tractogrphy input.  Can also be augmented with a LiFE input and/or a white matter classificaiton (WMC) object to perform statistical analyes relevant to the LiFE fit and/or segmentation.
+Visit [this site](https://doi.org/10.25663/brainlife.app.189) to run this app on the brainlife.io platform.  Minimally requires a [tractogram](https://brainlife.io/datatype/5907d922436ee50ffde9c549).  Can also be augmented with a [LiFE input](https://brainlife.io/datatype/58d15eaee13a50849b258844) and/or a [White Matter Classification (WMC) structure](https://brainlife.io/datatype/5cc1d64c44947d8aea6b2d8b) object to perform statistical analyes relevant to the [LiFE fit](https://dx.doi.org/10.1038%2Fnmeth.3098) and/or [segmentation](https://brainlife.io/datatype/5cc1d64c44947d8aea6b2d8b).
 
 ### Running Locally (on your machine) using singularity & docker
 
@@ -33,11 +33,11 @@ Because this is compiled code which runs on singularity, you can download the re
 
 ### Running Locally (on your machine)
 
-Pull the wma toolkit repo:  https://github.com/DanNBullock/wma_tools
+Pull the [WMA toolkit repo](https://github.com/DanNBullock/wma_tools)
 
 Ensure that the packages listed under 'adding paths' are avaialble on your local environment.
 
-Run: https://github.com/DanNBullock/wma_tools/blob/master/bsc_feAndSegQualityCheck_BL_v2.m, but take care to ensure that the addpath-genpath statements are relevant to your local setup.
+Run: [this function](https://github.com/DanNBullock/wma_tools/blob/master/bsc_feAndSegQualityCheck_BL_v2.m), but take care to ensure that the addpath-genpath statements are relevant to your local setup.
 
 Utilize a config.json setup that is analagous to the one contained within this repo, listed as a sample.
 
@@ -45,8 +45,8 @@ Utilize a config.json setup that is analagous to the one contained within this r
 
 Visit brainlife.io and explore the following data sets to find viable classification and tractography inputs:
 
-HCP classificaiton:  https://brainlife.io/project/5c3caea0a6747b0036dcbf9a/
-HCP tractography:  https://brainlife.io/project/5c3caea0a6747b0036dcbf9a/
+[HCP classificaiton](https://brainlife.io/project/5c3caea0a6747b0036dcbf9a/)
+[HCP tractography](https://brainlife.io/project/5c3caea0a6747b0036dcbf9a/)
 
 ### Output
 
@@ -54,7 +54,7 @@ There are three outputs associated A tractmeasures csv, an image/svg, and “raw
 
 **tractmeasures**
 
-a csv output from the quality check app ([https://doi.org/10.25663/brainlife.app.189](https://doi.org/10.25663/brainlife.app.189)) which displays the following traits for each tract:
+a csv output from the [quality check app](https://doi.org/10.25663/brainlife.app.189) which displays the following traits for each tract:
 
 | **Column header** | **Description** |
 | --- | --- |
@@ -110,9 +110,9 @@ a csv output from the quality check app ([https://doi.org/10.25663/brainlife.app
 
 
 
-**image/svg**** :**
+**image/svg**:
 
-An svg image output from the quality check app ([https://doi.org/10.25663/brainlife.app.189](https://doi.org/10.25663/brainlife.app.189)) with the following plots:
+An svg image output from the [quality check app](https://doi.org/10.25663/brainlife.app.189) with the following plots:
 
 | **Figure title** | **X axis quantity** | **Y axis quantity** | **Description** |
 | --- | --- | --- | --- |
@@ -124,32 +124,32 @@ An svg image output from the quality check app ([https://doi.org/10.25663/brainl
 
 
 
-**&quot;raw&quot; type output**** :**
+**quantative output**:
 
-A tiered, field based .mat structure with the metrics included in the **tractmeasures.csv** , along with additional metrics.  Generated as an output from the quality check app ([https://doi.org/10.25663/brainlife.app.189](https://doi.org/10.25663/brainlife.app.189)).  Below the metrics **not** included in the **tractmeasures.csv** are described.
+A tiered, field based .mat structure with the metrics included in the **tractmeasures.csv** , along with additional metrics.  Generated as an output from the [quality check app](https://doi.org/10.25663/brainlife.app.189).  Below the metrics **not** included in the **tractmeasures.csv** are described.
 
 Note:  statistics listed immediately below are those within the field contents of results.WBFG and are specific to the associated whole brain fiber group, and are thus **computed across all streamlines in the associated**** whole brain fiber group**.  The exception is the tractStats field, which will be described in a separate table immediately following this one.
 
 | **Fieldname (within results.WBFG)** | **Description** |
 | --- | --- |
 | avgefficiencyRat(average efficiency ratio) | This quantity is the _average efficiency ratio_ for all streamlines in the entire whole brain fiber group.  For a given streamline this is computed by dividing the streamline&#39;s _displacement_ (see description in tractmeasures.csv section) by that same streamline&#39;s length.  Thus this value approaches 1 as a streamline approaches being shaped like a straight line, and approaches 0 as a streamline approaches being shaped like a full circuit. |
-|   | [Code Link](https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/ConnectomeTestQ_v2.m#L49 |
+|   | [Code Link](https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/ConnectomeTestQ_v2.m#L49) |
 | stDevefficiencyRat(standard deviation of efficiency ratio) | This quantity is the _standard deviation of the efficiency ratio_ for all streamlines in the entire whole brain fiber group. |
-|   | [Code Link](https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma_quantTract.m#L71 |
-| avgAsymRat(average asymmetry ratio) | This quantity is the _average asymmetry ratio_ for all streamlines in the entire whole brain fiber group.  In essence, for a given streamline, it is the square of the differences between the efficiency ratios for the respective halves of a streamline.  Thus, as a streamline&#39;s _asymmetry ratio_ approaches the maximum of 1, it indicates that one half has an efficiency ratio of 0, and resembles a full circuit, while the other half has an efficiency ratio of 1 and resembles a straight line.  On the other hand, as a streamline&#39;s _asymmetry ratio_ approaches the minimum of 0, the difference between the two halves&#39; efficiency ratios approach 0, and are thus presumed to more closely resemble one another, at least within the domain of wiring efficiency. |
-|   | [Code Link](https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/ConnectomeTestQ_v2.m#L52 |
+|   | [Code Link](https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma_quantTract.m#L71) |
+| avgAsymRat(average asymmetry ratio) | This quantity is the _average asymmetry ratio_ for all streamlines in the entire whole brain fiber group.  In essence, for a given streamline, it is the square of the differences between the efficiency ratios for the respective halves of a streamline.  Thus, as a streamline&#39;s _asymmetry ratio_ approaches the maximum of 1, it indicates that one half has an efficiency ratio of 0, and resembles a full circuit, while the other half has an efficiency ratio of 1 and resembles a straight line.  On the other hand, as a streamline's _asymmetry ratio_ approaches the minimum of 0, the difference between the two halves' efficiency ratios approach 0, and are thus presumed to more closely resemble one another, at least within the domain of wiring efficiency. |
+|   | [Code Link](https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/ConnectomeTestQ_v2.m#L52) |
 | stdDevAsymRat(standard deviation of asymmetry ratio) | This quantity is the _standard deviation of the asymmetry ratio_ for all streamlines in the entire whole brain fiber group. |
-|   | [Code Link](https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma_quantTract.m#L65 |
+|   | [Code Link](https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma_quantTract.m#L65) |
 | volLengthRatio(volume length ratio) | The ratio of the total wiring length for all streamlines in the whole brain fiber group to the total white matter volume of the whole brain fiber group (i.e. in this case, simply the total volume of the white matter) |
-|   | [Code Link](https://github.com/DanNBullock/wma_tools/blob/92c4c1aa2bedd569e696ef1476eb979567849c9f/wma_quantTract.m#L96 |
-| lengthCounts  | A 1x299 long vector wherein the ith entry corresponds to the number of streamlines such that i≤[streamline length]\&lt;i+1 |
-|   | [Code Link](https://github.com/DanNBullock/wma_tools/blob/92c4c1aa2bedd569e696ef1476eb979567849c9f/wma_quantTract.m#L99 |
-| LengthProps | A 1x299 long vector wherein the ith entry corresponds to the proportion of the total number of streamlines such that i≤[streamline length]\&lt;i+1 |
-|   | [Code Link](https://github.com/DanNBullock/wma_tools/blob/5453f056df5f43c6a12c57fe76eabfd7eba3705c/wma_quantWBFG.m#L52 |
+|   | [Code Link](https://github.com/DanNBullock/wma_tools/blob/92c4c1aa2bedd569e696ef1476eb979567849c9f/wma_quantTract.m#L96) |
+| lengthCounts  | A 1x299 long vector wherein the ith entry corresponds to the number of streamlines such that i≤[streamline length]<i+1 |
+|   | [Code Link](https://github.com/DanNBullock/wma_tools/blob/92c4c1aa2bedd569e696ef1476eb979567849c9f/wma_quantTract.m#L99) |
+| LengthProps | A 1x299 long vector wherein the ith entry corresponds to the proportion of the total number of streamlines such that i≤[streamline length]<i+1 |
+|   | [Code Link](https://github.com/DanNBullock/wma_tools/blob/5453f056df5f43c6a12c57fe76eabfd7eba3705c/wma_quantWBFG.m#L52) |
 | LengthData | The computed length for each streamline in the whole brain fiber group. |
-|   | [Code Link](https://github.com/DanNBullock/wma_tools/blob/5453f056df5f43c6a12c57fe76eabfd7eba3705c/wma_quantWBFG.m#L62 |
+|   | [Code Link](https://github.com/DanNBullock/wma_tools/blob/5453f056df5f43c6a12c57fe76eabfd7eba3705c/wma_quantWBFG.m#L62) |
 | tractStats | A 1 by N cell structure, wherein each cell entry corresponds to the output of a quantitative analysis **for a specific tract**.  The ith entry in this cell structure corresponds to the tract specified in the ith entry in the classification.names field of the associated classification structure. |
-|   | [Code Link](https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma_quantAllWMNorm.m#L46 |
+|   | [Code Link](https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma_quantAllWMNorm.m#L46) |
 
 Note:  statistics listed immediately below are those within the field contents of results.WBFG.tractStats{1,i}, where i corresponds the tract specified in the ith entry in the classification.names field of the associated classification structure.  The quantifications described below are specific to their associated tract.  Omitted from these descriptions are quantifications which have been described either for the **tractmeasures.csv** data object or the results.WBFG field.  In cases where the quantification has previously been described within the context of a measurement of a whole brain fiber group, the quantification is to be understood to represent the same general concept, but to characterize a specific tract in these cases.
 
@@ -182,8 +182,7 @@ Currently not implimented
 
 ### Dependencies
 
-This App only requires [singularity](https://www.sylabs.io/singularity/) and in order to load the tck, a verson of vistasoft.  
+This App only requires [singularity](https://www.sylabs.io/singularity/), and in order to load the [tck](https://brainlife.io/datatype/5907d922436ee50ffde9c549), a verson of [vistasoft](https://github.com/vistalab/vistasoft).  
+([Click here](https://singularity.lbl.gov/docs-installation) to learn more about installing singularity)
 
-https://singularity.lbl.gov/docs-installation\
-https://github.com/vistalab/vistasoft
  
