@@ -194,4 +194,9 @@ Currently not implimented
 This App only requires [singularity](https://www.sylabs.io/singularity/), and in order to load the [tck](https://brainlife.io/datatype/5907d922436ee50ffde9c549), a verson of [vistasoft](https://github.com/vistalab/vistasoft).  
 ([Click here](https://singularity.lbl.gov/docs-installation) to learn more about installing singularity)
 
- 
+### Relase Noet
+
+### 1.3
+
+Updated the neuro/tractmeasure output column name to use "structureID" instead of "TractName" to adheare to neuro/tractmeasure datatype specification
+
