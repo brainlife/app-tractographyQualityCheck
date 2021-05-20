@@ -11,17 +11,15 @@ Date:   Tue Aug 20 12:20:38 2019 -0400
 
     fix table transpose issue for uniform type tables
 /N/u/brlife/git/vistasoft
-commit b3823616ae64600a01f0223b6dba5279cf6cf3a7
-Merge: 8ce10bf 291190f
-Author: francopestilli <frakkopesto@gmail.com>
-Date:   Sun Mar 1 15:27:01 2020 -0500
+commit fff02a6fea0c84f2df6cb497ed406fb7866b2f72
+Author: jwinawer <jonathan.winawer@nyu.edu>
+Date:   Mon May 11 19:52:00 2020 -0400
 
-    Merge branch 'master' of https://github.com/vistalab/vistasoft
+    in the case where the requested coords are the same as the full set of coords in the view structure, return without searching to save time
 /N/u/brlife/git/wma_tools
-commit ae863769e7e732c3bcf730f30ac13a59be402b8d
-Author: Daniel Bullock <iisdanbul@gmail.com>
-Date:   Sun Feb 16 17:41:43 2020 -0500
+commit bdd4532a6dee9609b95377fcb9a6d97636cf18f5
+Author: Daniel Bullock <dnbulloc@iu.edu>
+Date:   Thu Jun 4 11:32:46 2020 -0400
 
-    fixed indexing issue
-    
-    fixed indexing issue with this line.  Note, other versions of this function do not have this issue.  Recommend replacing instances of this function with v4 https://github.com/DanNBullock/wma_tools/blob/master/bsc_makeFGsFromClassification_v4.m
+    reimplemented endpoint criteria for uncinate
+    previously, there appears to have been endpoint criteria to ensure that endpoints were localized to the anterior frontal inferior area.  Seems to have been lost.  Reimplemented here.

@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #for hpc
-module unload matlab
-module load matlab/2019a
+#module unload matlab
+#module load matlab/2019a
 
 log=compiled/commit_ids.txt
 true > $log

@@ -1,4 +1,5 @@
 {
     "track": "testdata/track/track.tck",
-    "classification-dis": "testdata/track/classification.mat"
+    "classification": "testdata/track/classification.mat",
+    "tracts": "testdata/track/tracts"
 }

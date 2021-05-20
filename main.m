@@ -3,7 +3,6 @@ function main()
 if ~isdeployed
     disp('adding paths');
     addpath(genpath('/N/u/brlife/git/encode'))
-    %addpath(genpath('/N/soft/rhel7/spm/8')) %spm needs to be loaded before vistasoft as vistasoft provides anmean that works
     addpath(genpath('/N/u/brlife/git/jsonlab'))
     addpath(genpath('/N/u/brlife/git/vistasoft'))
     addpath(genpath('/N/u/brlife/git/wma_tools'))
@@ -31,9 +30,6 @@ elseif isfield(config,'classification')
 else
     disp('no classification input')
 end
-
-%TODO what is this?
-%classification=classification; 
 
 if ~notDefined('classification')
     if length(classification.index)~=fibNum
@@ -93,7 +89,7 @@ fieldNames={'stream_count', 'volume','avg_stream_length','stream_length_stdev','
     'avgEndpointDist2','stDevEndpointDist1','stDevEndpointDist2','endpointDensity1','endpointDensity2','midpointDensity',...
     'avgMidpointDist','stDevMidpointDist','norms.volumeProp','norms.countProp','norms.wireProp'};
 
-fullFieldNames={'TractName','StreamlineCount', 'volume','avgerageStreamlineLength','streamlineLengthStdev','averageFullDisplacement','fullDisplacementStdev',...
+fullFieldNames={'structureID','StreamlineCount', 'volume','avgerageStreamlineLength','streamlineLengthStdev','averageFullDisplacement','fullDisplacementStdev',...
     'ExponentialFitA','ExponentialFitB','StreamlineLengthTotal','endpoint1Density','Endpoint2Density','AverageEndpointDistanceFromCentroid1',...
     'AverageEndpointDistanceFromCentroid2','stdevOfEndpointDistanceFromCentroid1','stdevEndpointDistanceFromCentroid2','MidpointDensity',...
     'averageMidpointDistanceFromCentroid','stDevOfMidpointDistanceFromCentroid','TotalVolumeProportion','TotalCountProportion','TotalWiringProportion'};
