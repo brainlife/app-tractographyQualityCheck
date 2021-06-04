@@ -1,8 +1,17 @@
 #!/bin/bash
 
+set -e
+set -x
+
 #for hpc
 #module unload matlab
 #module load matlab/2019a
+
+#make sure all required dep directories exist
+if [ ! -d /N/u/brlife/git ]; then
+    echo "/N/u/brlife/git doesn't exist"
+    exit 1
+fi
 
 log=compiled/commit_ids.txt
 true > $log
