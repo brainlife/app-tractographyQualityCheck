@@ -589,7 +589,7 @@ if exist('tableOut','var')
     if ~exist('resultsSummary', 'dir')
         mkdir('resultsSummary')
     end
-    writetable(tableOut,'resultsSummary/tractmeasures.csv.csv');
+    writetable(tableOut,'resultsSummary/tractmeasures.csv');
 end
 
 disp('all done ------------------------------------------')

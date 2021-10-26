@@ -1,9 +1,9 @@
 /N/u/brlife/git/encode
-commit 034825b0c304679d36c41906dfb4c9850cb64eae
-Author: francopestilli <frakkopesto@gmail.com>
-Date:   Sun Mar 1 15:25:30 2020 -0500
+commit 3b30f82fded4e1be470e08011a3246cf336cf820
+Author: Franco Pestilli <frakkopesto@gmail.com>
+Date:   Thu Mar 11 16:04:11 2021 -0600
 
-    BUG: Fixed a size error in one of the calls. This was the result of the previous commit.
+    Update README.md
 /N/u/brlife/git/jsonlab
 commit 31eabbaab227d500786aaa472b9f5bbd9f082c61
 Author: Qianqian Fang <fangqq@gmail.com>
@@ -11,15 +11,17 @@ Date:   Tue Aug 20 12:20:38 2019 -0400
 
     fix table transpose issue for uniform type tables
 /N/u/brlife/git/vistasoft
-commit fff02a6fea0c84f2df6cb497ed406fb7866b2f72
-Author: jwinawer <jonathan.winawer@nyu.edu>
-Date:   Mon May 11 19:52:00 2020 -0400
+commit d6d02075ae83e3df869cc86e90e7c14e8f7497db
+Author: Jon Winawer <jonathan.winawer@nyu.edu>
+Date:   Wed Mar 17 16:22:12 2021 -0400
 
-    in the case where the requested coords are the same as the full set of coords in the view structure, return without searching to save time
+    bug fix to rmMakeStimulus
 /N/u/brlife/git/wma_tools
-commit bdd4532a6dee9609b95377fcb9a6d97636cf18f5
+commit 2886cee3b6669d3221e43307e9aa810c995bf3b6
 Author: Daniel Bullock <dnbulloc@iu.edu>
-Date:   Thu Jun 4 11:32:46 2020 -0400
+Date:   Fri Sep 17 16:04:24 2021 -0400
 
-    reimplemented endpoint criteria for uncinate
-    previously, there appears to have been endpoint criteria to ensure that endpoints were localized to the anterior frontal inferior area.  Seems to have been lost.  Reimplemented here.
+    updated get roi for some reason, created D99 inflate
+    apparently the old roi from atlas nums doesnt work,
+    maybe a 2021 thing.  Updates to inflate code using dialate
+    suggest that old inflate code won't work anymore.
