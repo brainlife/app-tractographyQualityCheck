@@ -21,14 +21,14 @@ echo "/N/u/brlife/git/jsonlab" >> $log
 (cd /N/u/brlife/git/jsonlab && git log -1) >> $log
 echo "/N/u/brlife/git/vistasoft" >> $log
 (cd /N/u/brlife/git/vistasoft && git log -1) >> $log
-echo "/N/u/brlife/git/wma_tools" >> $log
-(cd /N/u/brlife/git/wma_tools && git log -1) >> $log
+echo "wma_tools" >> $log
+(cd wma_tools && git log -1) >> $log
 
 cat > build.m <<END
 addpath(genpath('/N/u/brlife/git/encode'))
 addpath(genpath('/N/u/brlife/git/jsonlab'))
 addpath(genpath('/N/u/brlife/git/vistasoft'))
-addpath(genpath('/N/u/brlife/git/wma_tools'))
+addpath(genpath('wma_tools'))
 mcc -m -R -nodisplay -d compiled main
 
 exit
