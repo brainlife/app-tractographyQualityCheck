@@ -5,7 +5,7 @@ if ~isdeployed
     addpath(genpath('/N/u/brlife/git/encode'))
     addpath(genpath('/N/u/brlife/git/jsonlab'))
     addpath(genpath('/N/u/brlife/git/vistasoft'))
-    addpath(genpath('/N/u/brlife/git/wma_tools'))
+    addpath(genpath('wma_tools'))
 end
 
 config = loadjson('config.json');
@@ -203,7 +203,7 @@ if ~notDefined('fe') & ~notDefined('classification')
 
     %% computation for seg bar plots
     %count plot
-    classificationGrouping = wma_classificationStrucGrouping(classification);
+    classificationGrouping = wma_classificationStrucGrouping_v2(classification);
     countPlotInput=zeros(2,(length(classificationGrouping.names)));
     volPlotInput=zeros(2,(length(classificationGrouping.names)));
 
@@ -403,7 +403,7 @@ elseif notDefined('fe') & ~notDefined('classification')
 
     %% computation for seg bar plots
     %count plot
-    classificationGrouping = wma_classificationStrucGrouping(classification);
+    classificationGrouping = wma_classificationStrucGrouping_v2(classification);
     countPlotInput=zeros(2,(length(classificationGrouping.names)));
     volPlotInput=zeros(2,(length(classificationGrouping.names)));
 

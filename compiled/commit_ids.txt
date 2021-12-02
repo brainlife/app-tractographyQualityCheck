@@ -1,22 +1,25 @@
 /N/u/brlife/git/encode
-commit 3b30f82fded4e1be470e08011a3246cf336cf820
-Author: Franco Pestilli <frakkopesto@gmail.com>
-Date:   Thu Mar 11 16:04:11 2021 -0600
+commit 034825b0c304679d36c41906dfb4c9850cb64eae
+Author: francopestilli <frakkopesto@gmail.com>
+Date:   Sun Mar 1 15:25:30 2020 -0500
 
-    Update README.md
+    BUG: Fixed a size error in one of the calls. This was the result of the previous commit.
 /N/u/brlife/git/jsonlab
-commit 31eabbaab227d500786aaa472b9f5bbd9f082c61
+commit 474d8c824800b5f2109c08f989085cb961acdbe3
+Merge: ae7a5d9 38b24fb
 Author: Qianqian Fang <fangqq@gmail.com>
-Date:   Tue Aug 20 12:20:38 2019 -0400
+Date:   Wed Sep 6 13:01:57 2017 -0400
 
-    fix table transpose issue for uniform type tables
+    Merge pull request #41 from dasantonym/master
+    
+    added package.json to be able to intall via npm package manager
 /N/u/brlife/git/vistasoft
-commit d6d02075ae83e3df869cc86e90e7c14e8f7497db
-Author: Jon Winawer <jonathan.winawer@nyu.edu>
-Date:   Wed Mar 17 16:22:12 2021 -0400
+commit fff02a6fea0c84f2df6cb497ed406fb7866b2f72
+Author: jwinawer <jonathan.winawer@nyu.edu>
+Date:   Mon May 11 19:52:00 2020 -0400
 
-    bug fix to rmMakeStimulus
-/N/u/brlife/git/wma_tools
+    in the case where the requested coords are the same as the full set of coords in the view structure, return without searching to save time
+wma_tools
 commit 2886cee3b6669d3221e43307e9aa810c995bf3b6
 Author: Daniel Bullock <dnbulloc@iu.edu>
 Date:   Fri Sep 17 16:04:24 2021 -0400
