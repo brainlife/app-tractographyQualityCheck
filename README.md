@@ -73,7 +73,7 @@ a csv output from the [quality check app](https://doi.org/10.25663/brainlife.app
 |   | [Code Link](https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma_quantTract.m#L75) |
 | volume | The volume occupied by this tract (presented in cubic mm) |
 |   | [Code Link](https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma_quantTract.m#L94) |
-| avgerageStreamlineLength | The mean streamline length of this tract |
+| averageStreamlineLength | The mean streamline length of this tract |
 |   | [Code Link](https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma_quantTract.m#L79) |
 | streamlineLengthStdev | The standard deviation of streamline lengths for this tract |
 |   | [Code Link](https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma_quantTract.m#L80) |
