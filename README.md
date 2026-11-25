@@ -1,20 +1,39 @@
-[![Abcdspec-compliant](https://img.shields.io/badge/ABCD_Spec-v1.1-green.svg)](https://github.com/brain-life/abcd-spec)
-[![Run on Brainlife.io](https://img.shields.io/badge/Brainlife-bl.app.189-blue.svg)](https://doi.org/10.25663/brainlife.app.189)
+<h1 align="center">Tractography quality check</h1>
 
-# app-tractographyQualityCheck
+<p align="center">
+  Quality-control statistics, a tractmeasures table and a summary figure for a whole-brain tractogram and its white matter classification.
+</p>
+
+<p align="center">
+  <a href="https://github.com/brainlife/abcd-spec"><img src="https://img.shields.io/badge/ABCD_Spec-v1.1-green.svg" alt="ABCD Spec v1.1"></a>
+  <a href="https://doi.org/10.25663/brainlife.app.189"><img src="https://img.shields.io/badge/Brainlife-brainlife.app.189-blue.svg" alt="Run on brainlife.io"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-lightgrey.svg" alt="MIT license"></a>
+</p>
+
+## 🧠 At a glance
 
 <!-- brainlife-app:begin (generated from the App manifest; edit the manifest, not this block) -->
 
-**Computes quality-control statistics and a summary figure for a whole-brain tractogram and its white matter classification (streamline count, volume, length distribution, per-tract measures) with the MATLAB wma_tools toolkit.**
+> **Computes quality-control statistics and a summary figure for a whole-brain tractogram and its white matter classification (streamline count, volume, length distribution, per-tract measures) with the MATLAB wma_tools toolkit.**
 
 A quality check application for tractography, and segmentatations. For the whole brain tractogram, provides a number of statistics associated with average streamline characteristics (i.e. count, volume occupied, avg length, length distribution). Does the same for the positively weighted streamlines of an FE structure if input. If a classification structure is input, provides a number of macrostructural statistics like stream count, volume, avg length, whole brain count/volume proportion, etc).
 
-Run it on brainlife.io: [https://doi.org/10.25663/brainlife.app.189](https://doi.org/10.25663/brainlife.app.189)
+| | |
+|---|---|
+| 📥 **Inputs** | `neuro/track/tck` · `neuro/wmc` |
+| 📤 **Outputs** | `generic/image/svg` · `raw` · `neuro/tractmeasures` |
+| 🐳 **Container** | `brainlife/mcr:r2019a` |
+| ⚙️ **Resources** | 8 CPUs · 28 GB memory · 18 h walltime |
+| 🔗 **Run it** | [doi.org/10.25663/brainlife.app.189](https://doi.org/10.25663/brainlife.app.189) |
+
+#### 📥 Inputs
 
 | Input | Datatype | Required | Description |
 |---|---|---|---|
 | `wbfg` | `neuro/track/tck` | yes | Whole brain tractography. A tractome which covers the entire white matter. |
 | `classification` | `neuro/wmc` | yes | A white matter classification structure which corresponds to the input whole brain tractography entered as a track/tck. classification.index must have one entry per streamline of the tractogram, otherwise the App stops with a mismatch error. |
+
+#### 📤 Outputs
 
 | Output | Datatype | Description |
 |---|---|---|
@@ -22,79 +41,64 @@ Run it on brainlife.io: [https://doi.org/10.25663/brainlife.app.189](https://doi
 | `tractmeasures` | `raw` | MATLAB results structure (tractomeResultStruc.mat) with all computed whole-brain and per-tract statistics. |
 | `resultsSummary` | `neuro/tractmeasures` | tractmeasures.csv with one row for the whole-brain tractogram and one per classified tract: streamline count, volume, length mean/stdev, displacement, endpoint and midpoint statistics and proportions of the whole brain. |
 
-Runtime: container `brainlife/mcr:r2019a`; 8 CPUs; 28 GB memory; 18 h walltime.
-
-Please cite:
-- Avesani P, McPherson B, Hayashi S, et al. The open diffusion data derivatives, brain data upcycling via integrated publishing of derivatives and reproducible open cloud services. Sci Data 6, 69 (2019). [doi:10.1038/s41597-019-0073-y](https://doi.org/10.1038/s41597-019-0073-y)
-
 <!-- brainlife-app:end -->
 
-This app computes a number of statistics about your [input tractogram](https://brainlife.io/datatype/5907d922436ee50ffde9c549) and any (optionally input) **associated** [White Matter Classification (WMC) structure](https://brainlife.io/datatype/5cc1d64c44947d8aea6b2d8b).  These statistics can be used to facilitate quality assurance on your tractography and segmentation, or as part of subject/group level quantative analysis for a research project.  See the output section for a detailed description of the measures computed.
+## 🏷️ Versions on brainlife.io
 
-### Authors
-- [Daniel Bullock](https://github.com/DanNBullock) (dnbulloc@iu.edu)
+| Version | Inputs | Branch | Run it | Status |
+|---|---|---|---|---|
+| Tractography quality check | tractogram and white matter classification | [`1.4`](https://github.com/brainlife/app-tractographyQualityCheck/tree/1.4) | [doi:10.25663/brainlife.app.189](https://doi.org/10.25663/brainlife.app.189) | current |
+| Tractography quality check | tractogram, optional LiFE and deprecated classification | [`master`](https://github.com/brainlife/app-tractographyQualityCheck/tree/master) | [doi:10.25663/brainlife.app.139](https://doi.org/10.25663/brainlife.app.139) | deprecated |
 
-### Contributors
-- [Soichi Hayashi](https://github.com/soichih) (hayashis@iu.edu)
+## 🚀 Running the App
 
-### Project Director
-- [Franco Pestilli](https://github.com/francopestilli) (franpest@indiana.edu)
+### ☁️ On brainlife.io
 
-### Funding
-[![NSF-BCS-1734853](https://img.shields.io/badge/NSF_BCS-1734853-blue.svg)](https://nsf.gov/awardsearch/showAward?AWD_ID=1734853)
-[![NSF-BCS-1636893](https://img.shields.io/badge/NSF_BCS-1636893-blue.svg)](https://nsf.gov/awardsearch/showAward?AWD_ID=1636893)
-[![NSF-ACI-1916518](https://img.shields.io/badge/NSF_ACI-1916518-blue.svg)](https://nsf.gov/awardsearch/showAward?AWD_ID=1916518)
-[![NSF-IIS-1912270](https://img.shields.io/badge/NSF_IIS-1912270-blue.svg)](https://nsf.gov/awardsearch/showAward?AWD_ID=1912270)
-[![NIH-NIBIB-R01EB029272](https://img.shields.io/badge/NIH_NIBIB-R01EB029272-green.svg)](https://grantome.com/grant/NIH/R01-EB029272-01)
-[![NIMH-T32-5T32MH103213-05](https://img.shields.io/badge/NIMH_T32-5T32MH103213--05-blue.svg)](https://projectreporter.nih.gov/project_info_description.cfm?aid=9725739)
+Open the App at [doi.org/10.25663/brainlife.app.189](https://doi.org/10.25663/brainlife.app.189), choose a whole-brain [tractogram](https://brainlife.io/datatype/5907d922436ee50ffde9c549) and the [white matter classification (WMC)](https://brainlife.io/datatype/5cc1d64c44947d8aea6b2d8b) made from that same tractogram, and press **Execute**. The App computes statistics about the tractogram and each classified tract with the MATLAB [wma_tools](https://github.com/DanNBullock/wma_tools) toolkit: streamline count, volume occupied, average length and length distribution for the whole brain, and macrostructural statistics such as streamline count, volume, average length and whole-brain count and volume proportions for each tract. Use them for quality assurance of tractography and segmentation, or in subject- and group-level quantitative analyses.
 
-### References 
-[Avesani, P., McPherson, B., Hayashi, S. et al. The open diffusion data derivatives, brain data upcycling via integrated publishing of derivatives and reproducible open cloud services. Sci Data 6, 69 (2019).](https://doi.org/10.1038/s41597-019-0073-y)
+The code also handles a [LiFE](https://dx.doi.org/10.1038%2Fnmeth.3098) structure (`fe`) in place of the tractogram, computing the same statistics for the positively weighted streamlines.
 
-## Running the App 
+### 💻 Locally
 
-### Inputs
+The App runs compiled MATLAB code, so you can run it with minimal setup. You need [Singularity/Apptainer](https://apptainer.org/); the code runs inside the MATLAB Runtime R2019a container.
 
-### On Brainlife.io
+1. Clone this repository and check out the branch brainlife.io runs: `git checkout 1.4`.
+2. Create `config.json` with the paths to your inputs:
 
-Visit [this site](https://doi.org/10.25663/brainlife.app.189) to run this app on the brainlife.io platform.  Minimally requires a [tractogram](https://brainlife.io/datatype/5907d922436ee50ffde9c549).  Can also be augmented with a [LiFE input](https://brainlife.io/datatype/58d15eaee13a50849b258844) and/or a [White Matter Classification (WMC) structure](https://brainlife.io/datatype/5cc1d64c44947d8aea6b2d8b) object to perform statistical analyes relevant to the [LiFE fit](https://dx.doi.org/10.1038%2Fnmeth.3098) and/or [segmentation](https://brainlife.io/datatype/5cc1d64c44947d8aea6b2d8b).
+   ```json
+   {
+       "track": "/input/track/track.tck",
+       "classification": "/input/wmc/classification.mat",
+       "tracts": "/input/wmc/tracts"
+   }
+   ```
 
-### Running Locally (on your machine) using singularity & docker
+3. Run the App:
 
-Because this is compiled code which runs on singularity, you can download the repo and run it locally with minimal setup.  
+   ```bash
+   ./main
+   ```
 
-### Running Locally (on your machine)
+To run the MATLAB source instead, clone [wma_tools](https://github.com/DanNBullock/wma_tools) (included here as a submodule) and [vistasoft](https://github.com/vistalab/vistasoft), adjust the `addpath` statements in [`main.m`](main.m) to your setup, and run it with a `config.json` like the one above.
 
-Pull the [WMA toolkit repo](https://github.com/DanNBullock/wma_tools)
+### 🧪 Sample data
 
-Ensure that the packages listed under 'adding paths' are avaialble on your local environment.
+Explore the [HCP project on brainlife.io](https://brainlife.io/project/5c3caea0a6747b0036dcbf9a/) for suitable tractography and classification inputs.
 
-Run: [this function](https://github.com/DanNBullock/wma_tools/blob/master/bsc_feAndSegQualityCheck_BL_v2.m), but take care to ensure that the addpath-genpath statements are relevant to your local setup.
+## 📦 Outputs
 
-Utilize a config.json setup that is analagous to the one contained within this repo, listed as a sample.
+```text
+resultsSummary/tractmeasures.csv          one row for the whole-brain tractogram and one per tract (neuro/tractmeasures)
+image/image.svg                           summary figure (generic/image/svg)
+tractmeasures/tractomeResultStruc.mat     all computed statistics in a MATLAB structure (raw)
+```
 
-### Sample Datasets
-
-Visit brainlife.io and explore the following data sets to find viable classification and tractography inputs:
-
-[HCP classificaiton](https://brainlife.io/project/5c3caea0a6747b0036dcbf9a/)
-
-[HCP tractography](https://brainlife.io/project/5c3caea0a6747b0036dcbf9a/)
-
-### Output
-
-There are three outputs generated by this application:
-- [A tractmeasures csv](https://brainlife.io/datatype/599f305ad1f46fec1759f363)
-- [An image/svg](https://brainlife.io/datatype/5cb7711c44947d8aea8cb4f4)
-- [a “raw”  type output](https://brainlife.io/datatype/59c3eae633fc1cf9ead71679).
-
-[**tractmeasures**](https://brainlife.io/datatype/599f305ad1f46fec1759f363)
-
-a csv output from the [quality check app](https://doi.org/10.25663/brainlife.app.189) which displays the following traits for each tract:
+<details>
+<summary><b>tractmeasures.csv</b> columns</summary>
 
 | **Column header** | **Description** |
 | --- | --- |
-| TractName | The name of this tract |
+| structureID (formerly TractName) | The name of this tract |
 |   | Code Link:  NA |
 | StreamlineCount | The number of streamlines in this tract |
 |   | [Code Link](https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma_quantTract.m#L75) |
@@ -144,11 +148,10 @@ a csv output from the [quality check app](https://doi.org/10.25663/brainlife.app
 1. computing the primary dimension of traversal for a tract (i.e. left-right, inferior-superior, anterior-posterior) by determining which dimension exhibits the greatest displacement for the given tract.
 2. Once this dimension has been determined, the relevant coordinates (x, y, or z) of the streamline&#39;s endpoints are checked to determine determine LIP or RAS membership
 
+</details>
 
-
-[**image/svg**]((https://brainlife.io/datatype/5cb7711c44947d8aea8cb4f4))
-
-An svg image output from the [quality check app](https://doi.org/10.25663/brainlife.app.189) with the following plots:
+<details>
+<summary><b>image.svg</b> plots</summary>
 
 | **Figure title** | **X axis quantity** | **Y axis quantity** | **Description** |
 | --- | --- | --- | --- |
@@ -158,13 +161,12 @@ An svg image output from the [quality check app](https://doi.org/10.25663/brainl
 | &quot;Log10 of proportion of connectome streamlines in tract&quot; | tract names | log10 of the percentage of the total number of streamlines in whole brain fiber group | For all identified tracts in the input white matter classification (WMC) structure this plot indicates the percentage (scaled in log10) of all streamlines in the whole brain fiber group that are associated with this specific tract.For tracts which have left and right variants, left is plotted in blue and right is plotted in orange.  For tracts which do not have left and right variants (i.e. are interhemispheric) the default color is blue. |
 | &quot;Proportion of white matter volume occupied by tract&quot; | tract names | Portion of white matter occupied (by percent) | For all identified tracts in the input white matter classification (WMC) structure this plot indicates the percentage of the total white matter volume occupied by each respective tract. For tracts which have left and right variants, left is plotted in blue and right is plotted in orange.  For tracts which do not have left and right variants (i.e. are interhemispheric) the default color is blue. |
 
+</details>
 
+<details>
+<summary><b>tractomeResultStruc.mat</b> fields not in tractmeasures.csv</summary>
 
-[**raw, quantative output**](https://brainlife.io/datatype/5cb7711c44947d8aea8cb4f4)
-
-A tiered, field based .mat structure with the metrics included in the **tractmeasures.csv** , along with additional metrics.  Generated as an output from the [quality check app](https://doi.org/10.25663/brainlife.app.189).  Below the metrics **not** included in the **tractmeasures.csv** are described.
-
-Note:  statistics listed immediately below are those within the field contents of results.WBFG and are specific to the associated whole brain fiber group, and are thus **computed across all streamlines in the associated**** whole brain fiber group**.  The exception is the tractStats field, which will be described in a separate table immediately following this one.
+Fields of `results.WBFG` are computed across all streamlines of the whole-brain fibre group, except `tractStats`, described in the second table.
 
 | **Fieldname (within results.WBFG)** | **Description** |
 | --- | --- |
@@ -187,9 +189,7 @@ Note:  statistics listed immediately below are those within the field contents o
 | tractStats | A 1 by N cell structure, wherein each cell entry corresponds to the output of a quantitative analysis **for a specific tract**.  The ith entry in this cell structure corresponds to the tract specified in the ith entry in the classification.names field of the associated classification structure. |
 |   | [Code Link](https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma_quantAllWMNorm.m#L46) |
 
-Note:  statistics listed immediately below are those within the field contents of results.WBFG.tractStats{1,i}, where i corresponds the tract specified in the ith entry in the classification.names field of the associated classification structure.  The quantifications described below are specific to their associated tract.  Omitted from these descriptions are quantifications which have been described either for the **tractmeasures.csv** data object or the results.WBFG field.  In cases where the quantification has previously been described within the context of a measurement of a whole brain fiber group, the quantification is to be understood to represent the same general concept, but to characterize a specific tract in these cases.
-
-
+Fields of `results.WBFG.tractStats{1,i}` describe the tract named in the ith entry of `classification.names`. Quantities already described above characterise the specific tract here.
 
 | **Fieldname (within results.WBFG.tractStats{1,i})** | **Description** |
 | --- | --- |
@@ -212,18 +212,48 @@ Note:  statistics listed immediately below are those within the field contents o
 | results.WBFG.tractStats{1,i}.midpointVolumeProp | The proportion of the total white matter volume occupied by this endpoint mask associated with the midpoints of streamlines associated with this tract.  Intended to control for variability in brain size. |
 |   | [Code Link](https://github.com/DanNBullock/wma_tools/blob/498706fb662a0af8ad431f297d8e2fd548fcca56/Analysis/wma_quantAllWMNorm.m#L59) |
 
-#### Product.json
+</details>
 
-Currently not implimented
+## 🩺 Troubleshooting
 
-### Dependencies
+- **`mismatch between classification structure and input fibergroup`**: the classification was made from a different tractogram (different streamline count). Use the classification generated from this exact tractogram.
 
-This App only requires [singularity](https://www.sylabs.io/singularity/), and in order to load the [tck](https://brainlife.io/datatype/5907d922436ee50ffde9c549), a verson of [vistasoft](https://github.com/vistalab/vistasoft).  
-([Click here](https://singularity.lbl.gov/docs-installation) to learn more about installing singularity)
+## 📚 Citing
 
-### Release Notes
+> [!TIP]
+> If you use this App in your work, please cite the App, the software it builds on and brainlife.io (below). GitHub's **Cite this repository** button gives the App citation in APA and BibTeX.
 
-### 1.3
+- Tractography quality check. brainlife.io App. [doi:10.25663/brainlife.app.189](https://doi.org/10.25663/brainlife.app.189)
+- Avesani P, McPherson B, Hayashi S, et al. The open diffusion data derivatives, brain data upcycling via integrated publishing of derivatives and reproducible open cloud services. Sci Data 6, 69 (2019). [doi:10.1038/s41597-019-0073-y](https://doi.org/10.1038/s41597-019-0073-y)
+- Bullock et al. Associative white matter connecting the dorsal and ventral posterior human cortex. *Brain Structure and Function* 224:2631-2660 (2019). [doi:10.1007/s00429-019-01907-8](https://doi.org/10.1007/s00429-019-01907-8)
+- Hayashi S, Caron BA, Heinsfeld AS, et al. brainlife.io: a decentralized and open-source cloud platform to support neuroscience research. *Nature Methods* 21:809–813 (2024). [doi:10.1038/s41592-024-02237-2](https://doi.org/10.1038/s41592-024-02237-2)
 
-Updated the neuro/tractmeasure output column name to use "structureID" instead of "TractName" to adheare to neuro/tractmeasure datatype specification
+## 👥 Authors
 
+- Franco Pestilli (project director)
+- Daniel Bullock ([@DanNBullock](https://github.com/DanNBullock))
+
+**Contributors:** Soichi Hayashi ([@soichih](https://github.com/soichih)), Brad Caron
+
+## 💰 Funding
+
+[![Wellcome-226486/Z/22/Z](https://img.shields.io/badge/Wellcome-226486%2FZ%2F22%2FZ-purple.svg)](https://wellcome.org/)
+[![NIH-NINDS-U24NS140384](https://img.shields.io/badge/NIH_NINDS-U24NS140384-green.svg)](https://reporter.nih.gov/project-details/11261037)
+[![NIH-NINDS-UM1NS132207](https://img.shields.io/badge/NIH_NINDS-UM1NS132207-green.svg)](https://reporter.nih.gov/project-details/11411328)
+[![NIH-NIBIB-R01EB029272](https://img.shields.io/badge/NIH_NIBIB-R01EB029272-green.svg)](https://reporter.nih.gov/project-details/10262925)
+[![NIH-NIBIB-R01EB030896](https://img.shields.io/badge/NIH_NIBIB-R01EB030896-green.svg)](https://reporter.nih.gov/project-details/10428625)
+[![NIH-NIMH-R01MH126699](https://img.shields.io/badge/NIH_NIMH-R01MH126699-green.svg)](https://reporter.nih.gov/project-details/10460628)
+[![NIH-NIDCD-R01DC020088](https://img.shields.io/badge/NIH_NIDCD-R01DC020088-green.svg)](https://reporter.nih.gov/project-details/11140284)
+[![NSF-BCS-1734853](https://img.shields.io/badge/NSF_BCS-1734853-blue.svg)](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1734853)
+[![NSF-BCS-2203524](https://img.shields.io/badge/NSF_BCS-2203524-blue.svg)](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2203524)
+[![NSF-IIS-1636893](https://img.shields.io/badge/NSF_IIS-1636893-blue.svg)](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1636893)
+[![NSF-OAC-2148729](https://img.shields.io/badge/NSF_OAC-2148729-blue.svg)](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2148729)
+[![NSF-IIS-1912270](https://img.shields.io/badge/NSF_IIS-1912270-blue.svg)](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1912270)
+[![NSF-IIS-2148700](https://img.shields.io/badge/NSF_IIS-2148700-blue.svg)](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2148700)
+[![NSF-OAC-1916518](https://img.shields.io/badge/NSF_OAC-1916518-blue.svg)](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1916518)
+
+<sub>brainlife.io is publicly funded, and acknowledging that support helps keep it running. This App was developed with support from Wellcome, the U.S. National Institutes of Health (including the BRAIN Initiative BRAIN CONNECTS program: The Axonal Projectome EXchange, U24NS140384, and the Center for Mesoscale Connectomics, UM1NS132207) and the U.S. National Science Foundation.</sub>
+
+## ⚖️ License
+
+[MIT](LICENSE).
