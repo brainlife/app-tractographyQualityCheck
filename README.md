@@ -2,6 +2,33 @@
 [![Run on Brainlife.io](https://img.shields.io/badge/Brainlife-bl.app.189-blue.svg)](https://doi.org/10.25663/brainlife.app.189)
 
 # app-tractographyQualityCheck
+
+<!-- brainlife-app:begin (generated from the App manifest; edit the manifest, not this block) -->
+
+**Computes quality-control statistics and a summary figure for a whole-brain tractogram and its white matter classification (streamline count, volume, length distribution, per-tract measures) with the MATLAB wma_tools toolkit.**
+
+A quality check application for tractography, and segmentatations. For the whole brain tractogram, provides a number of statistics associated with average streamline characteristics (i.e. count, volume occupied, avg length, length distribution). Does the same for the positively weighted streamlines of an FE structure if input. If a classification structure is input, provides a number of macrostructural statistics like stream count, volume, avg length, whole brain count/volume proportion, etc).
+
+Run it on brainlife.io: [https://doi.org/10.25663/brainlife.app.189](https://doi.org/10.25663/brainlife.app.189)
+
+| Input | Datatype | Required | Description |
+|---|---|---|---|
+| `wbfg` | `neuro/track/tck` | yes | Whole brain tractography. A tractome which covers the entire white matter. |
+| `classification` | `neuro/wmc` | yes | A white matter classification structure which corresponds to the input whole brain tractography entered as a track/tck. classification.index must have one entry per streamline of the tractogram, otherwise the App stops with a mismatch error. |
+
+| Output | Datatype | Description |
+|---|---|---|
+| `image` | `generic/image/svg` | SVG figure summarising whole-brain statistics, streamline length distributions and per-tract count and volume proportions. |
+| `tractmeasures` | `raw` | MATLAB results structure (tractomeResultStruc.mat) with all computed whole-brain and per-tract statistics. |
+| `resultsSummary` | `neuro/tractmeasures` | tractmeasures.csv with one row for the whole-brain tractogram and one per classified tract: streamline count, volume, length mean/stdev, displacement, endpoint and midpoint statistics and proportions of the whole brain. |
+
+Runtime: container `brainlife/mcr:r2019a`; 8 CPUs; 28 GB memory; 18 h walltime.
+
+Please cite:
+- Avesani P, McPherson B, Hayashi S, et al. The open diffusion data derivatives, brain data upcycling via integrated publishing of derivatives and reproducible open cloud services. Sci Data 6, 69 (2019). [doi:10.1038/s41597-019-0073-y](https://doi.org/10.1038/s41597-019-0073-y)
+
+<!-- brainlife-app:end -->
+
 This app computes a number of statistics about your [input tractogram](https://brainlife.io/datatype/5907d922436ee50ffde9c549) and any (optionally input) **associated** [White Matter Classification (WMC) structure](https://brainlife.io/datatype/5cc1d64c44947d8aea6b2d8b).  These statistics can be used to facilitate quality assurance on your tractography and segmentation, or as part of subject/group level quantative analysis for a research project.  See the output section for a detailed description of the measures computed.
 
 ### Authors
