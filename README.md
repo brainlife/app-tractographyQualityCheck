@@ -11,7 +11,7 @@ This app computes a number of statistics about your [input tractogram](https://b
 - [Soichi Hayashi](https://github.com/soichih) (hayashis@iu.edu)
 
 ### Project Director
-- [Franco Pestilli](https://github.com/francopestilli) (franpest@indiana.edu)
+- [Franco Pestilli](https://github.com/francopestilli) ([@francopestilli](https://github.com/francopestilli))
 
 ### Funding
 [![NSF-BCS-1734853](https://img.shields.io/badge/NSF_BCS-1734853-blue.svg)](https://nsf.gov/awardsearch/showAward?AWD_ID=1734853)
